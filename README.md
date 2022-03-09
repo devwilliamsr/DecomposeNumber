@@ -9,6 +9,9 @@ O projeto pode ser executado em Console Application e também ser consumido atra
 
 Pensando em escabilidade, o mesmo foi criado com .Net Core 3.1, permitindo assim executar a aplicação em um container (Linux/Windows).
 
+Também foi disponibilizado para os consumidores da API, um endpoint exclusivo para saber a vida da aplicação, se está de "pé" ou não.
+Para isso basta acessar http://localhost:5000/health sendo que o localhost pode ser um IP exposto em um servidor devidadente com sua respectiva porta.
+
 ## IMPORTANTE!
 **Usar Visual Studio 2019 ou VSCode como IDE**
 
