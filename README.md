@@ -7,6 +7,8 @@ Projeto .NET Core, baseado em uma implementação simplificada de DDD.
 Projeto criado para resolver um desafio cujo a finalidade é decompor um número em todos os seus divisores, enumerando também aqueles que forem primos.
 O projeto pode ser executado em Console Application e também ser consumido através de uma API.
 
+Pensando em escabilidade, o mesmo foi criado com .Net Core 3.1, permitindo assim executar a aplicação em um container (Linux/Windows).
+
 ## IMPORTANTE!
 **Usar Visual Studio 2019 ou VSCode como IDE**
 
@@ -27,12 +29,18 @@ A documentação da API está exposta no swagger, permitindo testar e receber os
 
 6) A camada TEST é responsável por testes unitários (sucesso/erros). Nela está sendo utilizado o xUnit.
 
-## Tecnologias e metodologias
+## Tecnologias e arquitetura
 Plataforma: .Net Core 3.1
 
 Linguagem: C# 
 
 Design: Simple DDD
+
+Docker
+
+Para configurar o docker, basta ir até a pasta DN.Api e executar os comandos:
+> "docker build -t decomposenumberapi-image -f Dockerfile ." SEM AS ASPAS
+> "docker run -d -p 5000:80 --name decomposenumberapi-image decomposenumberapi-image" SEM AS ASPAS
 
 ## Considerações finais
 
