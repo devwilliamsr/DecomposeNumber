@@ -25,6 +25,7 @@ namespace api
         {
 
             services.AddControllers();
+            services.AddHealthChecks();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -61,6 +62,7 @@ namespace api
                 //endpoints.MapHealthChecks("/health");
             });
 
+            app.UseHealthChecks("/health");
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
