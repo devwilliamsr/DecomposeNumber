@@ -1,9 +1,8 @@
-﻿using System;
-
-namespace Utils
+﻿namespace Utils
 {
     public class Util
     {
+        //Validando se o valor digitado é válido e retornando a mensagem de erro caso seja inválido
         public static string ValidarValorDeEntrada(string valor)
         {
             if (string.IsNullOrEmpty(valor))
@@ -30,7 +29,7 @@ namespace Utils
             if (numero <= 1)
                 return false;
 
-            for (int i = 2; i <= (numero / 2); i++)
+            for (int i = 2; i < numero; i++) //começando i = 2 pois se for i = 1 a condicional if seria verdade e não conseguiremos tratar os primos de forma correta
             {
                 //se for verdade o número não é primo
                 if (numero % i == 0)

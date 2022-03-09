@@ -46,7 +46,7 @@ namespace application
         {
             Console.Write("\n\rDigite um número inteiro e positivo: ");
 
-            string valorLido = Console.ReadLine().ToString(); //Usado valor como string para passar para função da linha abaixo e ser feita as devidas tratativas.
+            string valorLido = Console.ReadLine().ToString(); //Usado valor como string para que consigamos usar para a função da linha abaixo e ser feita as devidas validações.
             string msgErro = Util.ValidarValorDeEntrada(valorLido);
 
             //Se a condicional abaixo for verdade, ou seja, a função ValidarValorDeEntrada retornou uma mensagem, é sinal que o valor digitado é inválido e o retorno sera do erro.
